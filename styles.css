@@ -1,0 +1,288 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+.top-bar {
+  background-color: #333;
+  color: white;
+  padding: 5px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top-bar a {
+  color: #1e90ff;
+  text-decoration: none;
+  margin-left: 10px;
+}
+.top-bar .contact-info {
+  display: flex;
+  align-items: center;
+}
+.top-bar .social-icons a {
+  color: white;
+  margin-left: 10px;
+}
+.navbar {
+  background-color: #4b006e;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Ensures vertical alignment of all navbar items */
+}
+.navbar img {
+  height: 50px;
+  margin-right: 10px;
+}
+.navbar .nav-links {
+  display: flex;
+  align-items: center;
+}
+.navbar .nav-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+.navbar .nav-links .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Menu Style */
+.navbar .nav-links .dropdown-content {
+  display: none; /* Menyembunyikan dropdown submenu secara default */
+  position: absolute;
+  background-color: #7569b6;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  top: 100%;
+  left: 0;
+  padding: 0;
+  grid-template-columns: repeat(4, 4fr);
+}
+
+/* Make dropdown visible on hover */
+.navbar .nav-links .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Styling for each dropdown item */
+.navbar .nav-links .dropdown-content a {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Hover effect for links */
+.navbar .nav-links .dropdown-content a:hover {
+  background-color: #7a1f8f;
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .logo img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.navbar .logo span {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Align flag with the rest of the content */
+.navbar .flag {
+  height: 20px;
+  width: 30px;
+  margin-left: 10px; /* Add some space between the flag and other items */
+  align-self: center; /* Ensure the flag aligns vertically with the rest of the navbar */
+}
+/* Resetting some basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Carousel */
+#campusCarousel {
+  position: relative;
+}
+
+.carousel-item {
+  height: 500px;
+}
+
+.carousel-item img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.carousel-caption {
+  bottom: 50px;
+  text-align: center;
+}
+
+.carousel-caption h5 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.carousel-caption p {
+  font-size: 18px;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Promosi Kampus */
+.promotions {
+  background-color: #fff;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.promotions h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #003366;
+}
+
+.promotions .row {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.promotions .col-md-4 {
+  flex: 1;
+  padding: 20px;
+  margin: 0 15px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.promotions .col-md-4 h4 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #003366;
+}
+
+.promotions .col-md-4 p {
+  font-size: 16px;
+  color: #555;
+}
+
+.promotions .col-md-4:hover {
+  background-color: #003366;
+  color: #fff;
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .carousel-caption h5 {
+    font-size: 28px;
+  }
+
+  .carousel-caption p {
+    font-size: 16px;
+  }
+
+  .promotions .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .promotions .col-md-4 {
+    width: 80%;
+    margin-bottom: 30px;
+  }
+}
+/* Navbar yang ada */
+.navbar .nav-links {
+  display: flex;
+  align-items: center;
+}
+
+/* Sembunyikan menu pada layar kecil */
+@media screen and (max-width: 768px) {
+  .navbar .nav-links {
+    display: none; /* Menyembunyikan menu navigasi pada layar kecil */
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+    background-color: #4b006e; /* Warna latar belakang navbar */
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 1;
+  }
+
+  .navbar .nav-links a {
+    margin: 15px 0;
+  }
+
+  /* Menampilkan hamburger icon */
+  .navbar .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  /* Default hamburger icon */
+  .hamburger div {
+    background-color: white;
+    width: 30px;
+    height: 4px;
+    margin: 6px auto;
+    transition: all 0.3s ease;
+  }
+
+  /* Jika menu aktif, ubah tampilan icon hamburger */
+  .navbar.active .hamburger div:nth-child(1) {
+    transform: rotate(45deg);
+    position: relative;
+    top: 10px;
+  }
+
+  .navbar.active .hamburger div:nth-child(2) {
+    opacity: 0;
+  }
+
+  .navbar.active .hamburger div:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -10px;
+  }
+
+  .navbar.active .nav-links {
+    display: flex; /* Menampilkan menu ketika hamburger diklik */
+  }
+}
+
+/* Styling untuk item menu */
+.navbar .nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 18px;
+}
